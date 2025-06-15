@@ -33,8 +33,14 @@ const Footer = ({ language }: FooterProps) => {
               <div className="flex items-start gap-2 md:justify-end">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <span className="text-sm text-primary-foreground/80">
-                  서울 광진구 광나루로56길 63<br />
-                  프라임프라자 306호
+                  {language === 'ko' ? (
+                    <>
+                      서울 광진구 광나루로56길 63<br />
+                      프라임프라자 306호
+                    </>
+                  ) : (
+                    "Prime Plaza #306, 63, Gwangnaru-ro 56-gil, Gwangjin-gu, Seoul, Republic of Korea"
+                  )}
                 </span>
               </div>
               <div className="flex items-center gap-2 md:justify-end">
